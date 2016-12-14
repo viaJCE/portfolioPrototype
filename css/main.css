@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+
+@font-face {
+	font-family: "Cajito Light";
+	src: url("../fonts/cajitoextralight.otf");
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#landing {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+
+	background: 
+		
+		linear-gradient(
+					rgba(113, 113, 113, 0.5),
+					rgba(113, 113, 113, 0.5)
+				),
+		url('../img/cedricServay.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+/*header::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to left, #B24592 , #F15F79);
+	opacity: 0.8;
+}*/
+
+#landing h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 300;
+	text-align: center;
+	font-size: 3em;
+
+	margin-top: 0;
+	margin-bottom: 10px;
+	/*margin-left: 5px;*/
+	padding-top: 170px;
+	color: white;
+
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+#landing h3 {
+	width: 60%;
+	font-family: "Cajito Light";
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+	line-height: 1.5em;
+	letter-spacing: 5px;
+	border-top: 3px solid rgba(51, 51, 51, 0.6);
+	/*border-radius: 2px;*/
+	padding: 15px;
+	padding-bottom: 20px;
+	/*color: rgba(51, 51, 51, 0.6);*/
+
+	margin: 10px auto 0;
+	z-index: 1000;
+
+	opacity: 0;
+	animation-name: fade-in;
+	animation-delay: 1.3s;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+header #infoBox {
+	width: 40%;
+	position: relative;
+	top: 160px;
+	margin: 0 auto;
+	padding: 5px 15px;
+	border: 1px solid #717171;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0.6);
+
+	font-family: "Raleway", sans-serif;
+	font-weight: 400;
+	text-align: center;
+
+	opacity: 0;
+}
+
+#infoBox  p {
+	margin: 1em 0;
+
+	font-family: "Raleway", sans-serif;
+	font-weight: 400 !important;
+	text-align: center;
+	font-size: 1.1em;
+	color: black;
+}
+
+	.load {
+		animation-name: infoboxLoad;
+		animation-delay: 2.7s;
+		animation-duration: 1s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	#infoBox.disappear {
+		animation-name: disappear;
+		animation-delay: 0s;
+		animation-duration: 1s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+#infoBox #infoBoxButton {
+	width: 120px;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 2px;
+	color: black;
+	transition: all ease-out 0.3s;
+}
+
+#infoBox #infoBoxButton:hover {
+	color: #717171;
+	border-color: #717171;
+	background-color: white;
+	cursor: default;
+}
+
+@keyframes infoboxLoad {
+	0% {opacity: 0; top: 100px;}
+	/*80% {opacity: 1; top: 170px;}*/
+	100% {opacity: 1; top: 160px;}
+}
+
+@keyframes disappear {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+
+
+
+#landing #start {
+	display: block;
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto 60px;
+
+	text-decoration: none;
+	font-size: 2.5em;
+	text-align: center;
+	color: white;
+
+	padding: 5px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	border: 2px solid white;
+	border-radius: 50px;
+
+	transition: all ease-out 0.3s;
+	opacity: 0;
+}
+
+	#start.appear {
+		animation-name: appear;
+		animation-delay: 1s;
+		animation-duration: 1s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+#landing #start:hover {
+	border-color: rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 0.2);
+}
+
+
+@keyframes appear {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nameBar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	
+	z-index: 9;
+	
+	background-color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	padding: 12px 0;
+}
+
+.nameBar .title {
+	font-size: 1.7em;
+	font-family: "Raleway", sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	color: black;
+
+	margin: 0;
+}
+
+.navbar {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	border-radius: 0;
+	position: fixed;
+	top: 57px;
+	z-index: 9;
+
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 4px 0;
+	min-height: 0;
+}
+
+/*.affix {
+	position: fixed;
+}*/
+
+/*nav.affix {
+	position: relative;
+	top: 0;
+}*/
+
+nav > .container-fluid {
+	padding: 0;
+}
+
+nav .navbar-nav {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+
+.nav > li {
+	float: none;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+
+@media (min-width: 768px) {
+	.navbar-nav {
+    	float: none;
+    }
+
+    .navbar-nav>li {
+    	float: none;
+    }
+}
+
+nav li a {
+	display: inline-block;
+	margin: 0 auto;
+	width: 12px;
+	height: 12px;
+	border: 1px solid rgba(51, 51, 51, 0.9);
+	border-radius: 50px;
+	transition: all ease-out 0.3s;
+	padding: 0;
+}
+
+.nav li a {
+	padding: 0;
+}
+
+.nav li a:hover {
+	background-color: transparent;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+.nav li a:active {
+	background: linear-gradient(to left, #B24592 , #F15F79);
+}
+
+.navbar .navbar-nav>.active>a {
+	background: linear-gradient(to left, #B24592 , #F15F79);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /***********************************************************************
+ 				         For Filler Sections CSS
+**********************************************************************/
+
+#sectionsWrapper {
+	position: relative;
+}
+
+section {
+	height: 1800px;
+}
+
+section header {
+	position: relative;
+}
+
+#teller {
+	width: 20%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: 0 auto 20px;
+
+	background-color: white;
+	border: 1px solid gray;
+	padding: 10px 5px;
+	text-align: center;
+
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,1);
+	z-index: 9;
+}
+
+	#teller.affix {
+		position: fixed;
+	}
+
+#teller p {
+	margin: 0;
+	font-family: "Cajito Light";
+	font-size: 1.2em;
+	
+}
+
+	#about {
+		background-color: rgba(51, 51, 51, 0.2);
+	}
+
+	#skills {
+		background-color: rgba(51, 51, 51, 0.4);
+	}	
+
+	#photography {
+		background-color: rgba(51, 51, 51, 0.6);
+	} 
+
+	#portfolio {
+		background-color: rgba(51, 51, 51, 0.8);
+	} 
+
+	#contact {
+		background-color: rgb(51, 51, 51);
+	} 
+
+section header {
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	/*border: 1px solid black;*/
+}
+
+section header h1 {
+	font-family: sans-serif;
+	font-weight: 200;
+	color: white;
+	text-align: center;
+
+	width: 60%;
+
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	padding: 15px 10px;
+
+	background-color: black;
+}
