@@ -31,16 +31,18 @@ startButton.addEventListener('mouseover', function() {
 
 
 $(document).ready(function () {
-	var aboutTop = $('#about').offset().top;
 
-	$(window).scroll(function () {
-		if($(window).scrollTop() > aboutTop) {
+	var aboutTop = $('#about').offset().top;
+	$window = $(window);
+
+	$(window).on('scroll', function() {
+		if(window.scrollY > $('#about').offset().top) {
 			$('#teller').addClass('affix');
 		}
 		else {
 			$('#teller').removeClass('affix');
 		}
-	})
+	});
 
 	var linkLi = $('.linkLi');
 
@@ -68,12 +70,19 @@ console.log(sections);
 console.log(eachLink);
 console.log(secNames[1]);
 
-document.addEventListener('scroll', function() {
-	for (let i = 0; i < eachLink.length; i++) {
-		if (eachLink[i].classList.contains("active")) {
-			tellerText.innerText = secNames[i];
+$(document).ready(function() {
+	document.addEventListener('scroll', function() {
+		for (let i = 0; i < eachLink.length; i++) {
+			if (eachLink[i].classList.contains("active")) {
+				tellerText.innerText = secNames[i];
+			}
 		}
-	}
+	})
 })
 
 
+
+
+while ($(window).scrollTop() > $('#about').offset().top) {
+	console.log($('#about').offset().top);
+}

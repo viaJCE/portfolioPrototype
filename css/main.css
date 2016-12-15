@@ -23,9 +23,7 @@ body {
 	height: 100vh;
 	position: relative;
 
-	background: 
-		
-		linear-gradient(
+	background: linear-gradient(
 					rgba(113, 113, 113, 0.5),
 					rgba(113, 113, 113, 0.5)
 				),
@@ -331,10 +329,12 @@ nav li a {
 
 .nav li a:active {
 	background: linear-gradient(to left, #B24592 , #F15F79);
+	background: linear-gradient(to right, #3bdaca, #3a4ed5);
 }
 
 .navbar .navbar-nav>.active>a {
 	background: linear-gradient(to left, #B24592 , #F15F79);
+	background: linear-gradient(to right, rgba(59, 218, 202, 0.4) 30%, rgba(59, 218, 202, 0.6) 60%, rgba(59, 218, 202, 0.8) 100%);
 }
 
 
@@ -361,7 +361,7 @@ nav li a {
 
 #sectionsWrapper {
 	position: relative;
-	display: none;
+	/*display: none;*/
 }
 
 section {
@@ -397,8 +397,9 @@ section header {
 	margin: 0;
 	font-family: "Cajito Light";
 	font-size: 1.2em;
+	color: ;
+
 	transition: all ease-out 0.3s;
-	
 }
 
 
@@ -465,9 +466,20 @@ section header {
 	#about .h1Underline {
 		width: 10%;
 		margin: 0 auto;
-		border: 1px solid black;
+		border: 1px solid white;
+		border-image: linear-gradient(to right, #3bdaca 30%, #3a4ed5 100%);
+		border-image-slice: 1;
+		/*(59,202,212)*/
 	}
 
+	#about article.aboutMe {
+		width: 70%;
+		margin: 60px auto;
+	}
+
+	#about article.aboutMe p{
+		width: 100%;
+	}
 
 
 
