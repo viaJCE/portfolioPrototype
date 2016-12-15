@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 @font-face {
 	font-family: "Cajito Light";
@@ -242,17 +243,19 @@ header #infoBox {
 	
 	background-color: rgba(255, 255, 255, 0.6);
 	text-align: center;
-	padding: 12px 0;
+	/*padding: 12px 0;*/
 }
 
 .nameBar .title {
+	display: block;
+	margin: 0;
+	padding-top: 10px;
+
 	font-size: 1.7em;
 	font-family: "Raleway", sans-serif;
 	font-weight: 300;
 	text-decoration: none;
 	color: black;
-
-	margin: 0;
 }
 
 .navbar {
@@ -260,12 +263,12 @@ header #infoBox {
 	height: auto;
 	margin: 0;
 	border-radius: 0;
-	position: fixed;
-	top: 57px;
+/*	position: fixed;
+	top: 57px;*/
 	z-index: 9;
 
-	background-color: rgba(255, 255, 255, 0.6);
-	padding: 4px 0;
+	/*background-color: rgba(255, 255, 255, 0.6);*/
+	padding: 10px 0;
 	min-height: 0;
 }
 
@@ -365,12 +368,21 @@ nav li a {
 }
 
 section {
-	height: 1800px;
+	/*height: 1800px;*/
 }
 
 section header {
+	width: 100%;
+	min-height: 100vh;
+
+	margin: 0 auto 100px;
+	padding: 60px 0;
+
+	background-color: white;
 	position: relative;
+	/*border: 1px solid black;*/
 }
+
 
 #teller {
 	width: 20%;
@@ -382,6 +394,7 @@ section header {
 
 	background-color: white;
 	border: 1px solid gray;
+	border-radius: 2px;
 	padding: 10px 5px;
 	text-align: center;
 
@@ -403,14 +416,6 @@ section header {
 }
 
 
-section header {
-	width: 100%;
-	height: 100vh;
-	background-color: white;
-	position: relative;
-	/*border: 1px solid black;*/
-}
-
 /*section header h1 {
 	font-family: sans-serif;
 	font-weight: 200;
@@ -429,6 +434,15 @@ section header {
 	background-color: black;
 }*/
 
+.sectionBody {
+	border-top: 1px solid;
+}
+
+section article {
+	font-size: 1.3em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
 
 
 
@@ -472,24 +486,51 @@ section header {
 		/*(59,202,212)*/
 	}
 
-	#about article.aboutMe {
+	#about article#aboutMe {
 		width: 70%;
-		margin: 60px auto;
+		margin: 60px auto 120px;
 	}
 
-	#about article.aboutMe p{
+	#about article#aboutMe p{
 		width: 100%;
+
+		text-align: center;
+		font-size: 1.3em;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
 	}
 
 
+#about article.moreOnMe {
+	width: 70%;
+	margin: 120px auto;
+	border-bottom: 2px solid white;
+	padding-bottom: 30px;
+	border-image: linear-gradient(to right, #3bdaca 30%, #3a4ed5 100%);
+	border-image-slice: 1;
+
+	animation-name: fadeInUp;
+	animation-fill-mode: forwards;
+}
+
+	#about article.moreOnMe:nth-child(1n) {
+		text-align: right;
+		margin-bottom: 200px
+	}
+
+	#about article.moreOnMe:nth-child(2n) {
+		text-align: left;
+	}
+
+#about article.moreOnMe p{
+	width: 90%;
+	margin: 20px auto;
+}
 
 
+@keyframes fadeInUp {
 
-
-
-
-
-
+}
 
 
 

@@ -47,7 +47,7 @@ $(document).ready(function () {
 	var linkLi = $('.linkLi');
 
 	for (let i = 0; i < linkLi.length; i++) {
-		console.log(linkLi[i]);
+		// console.log(linkLi[i]);
 		$(linkLi[i]).on('mouseover', function(){
 			tellerText.innerText = secNames[i];
 			tellerText.style.color = "blue";
@@ -83,6 +83,15 @@ $(document).ready(function() {
 
 
 
-while ($(window).scrollTop() > $('#about').offset().top) {
-	console.log($('#about').offset().top);
-}
+$(document).ready( function() {
+	var aboutSecBody = $('#about .sectionBody');
+	console.log('aboutSecBody');
+
+	$(window).on('scroll', function() {
+		if ((window.scrollY / 2) > $('#about .sectionBody').offset().top) {
+			console.log("this is the middle");
+		}
+	})
+})
+
+// change window.scrolly with window (window).scrollTop ???
