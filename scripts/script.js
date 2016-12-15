@@ -24,6 +24,10 @@ if (infoBox.classList.contains("disappear")) {
 	infoBox.style.display = "none";	
 }
 
+startButton.addEventListener('mouseover', function() {
+	document.getElementById('sectionsWrapper').style.display = "block";
+})
+
 
 
 $(document).ready(function () {
@@ -37,9 +41,26 @@ $(document).ready(function () {
 			$('#teller').removeClass('affix');
 		}
 	})
+
+	var linkLi = $('.linkLi');
+
+	for (let i = 0; i < linkLi.length; i++) {
+		console.log(linkLi[i]);
+		$(linkLi[i]).on('mouseover', function(){
+			tellerText.innerText = secNames[i];
+			tellerText.style.color = "blue";
+		})
+		$(linkLi[i]).on('mouseout', function(){
+			for (let i = 0; i < eachLink.length; i++) {
+				if (eachLink[i].classList.contains("active")) {
+					tellerText.innerText = secNames[i];
+					tellerText.style.color = "black";
+				}
+			}
+		});
+	}
+
 });
-
-
 
 
 
@@ -47,16 +68,12 @@ console.log(sections);
 console.log(eachLink);
 console.log(secNames[1]);
 
-if (eachLink[0].classList.contains("active")) {
-	tellerText.innerHTML = secNames[0];
-}
+document.addEventListener('scroll', function() {
+	for (let i = 0; i < eachLink.length; i++) {
+		if (eachLink[i].classList.contains("active")) {
+			tellerText.innerText = secNames[i];
+		}
+	}
+})
 
-if (eachLink[1].classList.contains("active")) {
-	tellerText.innerHTML = secNames[1];
-}
 
-// for (let i = 0; i < eachLink.length; i++) {
-// 	if (eachLink[i].classList.contains('active')) {
-// 		tellerText.innerHTML = secNames[i];
-// 	}
-// }

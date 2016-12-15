@@ -5,6 +5,11 @@
 	src: url("../fonts/cajitoextralight.otf");
 }
 
+@font-face {
+	font-family: "Cajito";
+	src: url("../fonts/cajitoregular.otf");
+}
+
 
 body {
 	margin: 0;
@@ -356,6 +361,7 @@ nav li a {
 
 #sectionsWrapper {
 	position: relative;
+	display: none;
 }
 
 section {
@@ -391,12 +397,96 @@ section header {
 	margin: 0;
 	font-family: "Cajito Light";
 	font-size: 1.2em;
+	transition: all ease-out 0.3s;
 	
 }
 
-	#about {
-		background-color: rgba(51, 51, 51, 0.2);
+
+section header {
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	position: relative;
+	/*border: 1px solid black;*/
+}
+
+/*section header h1 {
+	font-family: sans-serif;
+	font-weight: 200;
+	color: white;
+	text-align: center;
+
+	width: 60%;
+
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+	padding: 15px 10px;
+
+	background-color: black;
+}*/
+
+
+
+
+
+
+
+
+
+
+#about {
+	/*background-color: rgba(51, 51, 51, 0.2);*/
+
+}
+
+	#head_image {
+		width: 60%;
+		margin: 0 auto 60px;
+		padding-top: 130px;
 	}
+
+		#head_image img {
+			width: 100%;
+		}
+
+	#about h1 {
+		width: 60%;
+		margin: 20px auto;
+		
+		text-align: center;
+		font-family: "Raleway", sans-serif;
+		font-weight: 300;
+		color: rgba(113, 113, 113, 0.6);
+	}
+
+	#about .h1Underline {
+		width: 10%;
+		margin: 0 auto;
+		border: 1px solid black;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	#skills {
 		background-color: rgba(51, 51, 51, 0.4);
@@ -413,28 +503,3 @@ section header {
 	#contact {
 		background-color: rgb(51, 51, 51);
 	} 
-
-section header {
-	width: 100%;
-	height: 100vh;
-	background-color: white;
-	/*border: 1px solid black;*/
-}
-
-section header h1 {
-	font-family: sans-serif;
-	font-weight: 200;
-	color: white;
-	text-align: center;
-
-	width: 60%;
-
-	margin: 0 auto;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-
-	padding: 15px 10px;
-
-	background-color: black;
-}
