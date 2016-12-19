@@ -82,16 +82,24 @@ $(document).ready(function() {
 
 
 
+var aboutSecBody = document.querySelector("#about > .sectionBody");
+var aSBOffset = aboutSecBody.getBoundingClientRect();
+var aSBOffset_top = aSBOffset.top;
+var midOfWindow = (window.innerHeight / 2);
+console.log(aboutSecBody);
+console.log(aSBOffset);
+console.log(aSBOffset_top)
+console.log(midOfWindow);
 
-$(document).ready( function() {
-	var aboutSecBody = $('#about .sectionBody');
-	console.log('aboutSecBody');
 
+$(document).ready( function() {	
+	
 	$(window).on('scroll', function() {
-		if ((window.scrollY / 2) > $('#about .sectionBody').offset().top) {
+		if (midOfWindow >= aSBOffset_top) {
 			console.log("this is the middle");
+		}
+		else {
+			console.log('This is not the middle');
 		}
 	})
 })
-
-// change window.scrolly with window (window).scrollTop ???

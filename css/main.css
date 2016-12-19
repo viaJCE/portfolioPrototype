@@ -386,12 +386,14 @@ section header {
 
 #teller {
 	width: 20%;
+	max-height: 45px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	margin: 0 auto 20px;
 
+	box-sizing: border-box;
 	background-color: white;
 	border: 1px solid gray;
 	border-radius: 2px;
@@ -409,9 +411,9 @@ section header {
 #teller p {
 	margin: 0;
 	font-family: "Cajito Light";
-	font-size: 1.2em;
-	color: ;
-
+	font-size: 1.3em;
+	letter-spacing: 3px;
+	
 	transition: all ease-out 0.3s;
 }
 
@@ -522,6 +524,21 @@ section article {
 		text-align: left;
 	}
 
+#about article h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+	/*#about article h3:nth-child(1n) {
+		text-align: right;
+		margin-right: 20px;
+	}*/
+
+	#about article h3:nth-child(2n) {
+		text-align: left;
+		margin-left: 20px;
+	}
+
 #about article.moreOnMe p{
 	width: 90%;
 	margin: 20px auto;
@@ -541,9 +558,78 @@ section article {
 
 
 
-	#skills {
-		background-color: rgba(51, 51, 51, 0.4);
+section#skills {
+		
+}
+
+
+	#skills h1 {
+		width: 60%;
+		margin: 0 auto 60px;
+		padding-top: 60px;
+
+		font-family: "Raleway", sans-serif;
+		font-weight: 300;
+		text-align: center;
+		color: #717171;
+	}
+
+	#skills .skills_wrapper {
+		width: 95%;
+		padding: 0;
+	}
+
+
+	#skills .skillsRow {
+
+	}
+
+	#skills .skillsBox {
+		width: 31%;
+		position: relative;
+		margin: 20px 1.1%;
+
+		border: 1px solid rgba(113, 113, 113, 0.2);
+		border-radius: 5px;
+		box-sizing: border-box;
+		padding: 10px 0;
 	}	
+
+		#skills .skillsBox h3, #skills .skillsBox h5 {
+			font-family: "Raleway", sans-serif;
+			font-weight: 300;
+			text-align: center;
+		}
+
+		#skills .skillsBox .c100 {
+			float: none;
+			margin: 20px auto;
+		}
+	
+		#skills .skillsBox .c100 .slice .bar {
+			border-color: #3bdaca;
+		}
+
+		#skills .skillsBox .c100 .slice .fill {
+			border-color: #3bdaca;
+		}
+
+		#skills .skillsBox h5 {
+			color: rgba(113, 113, 113, 0.4);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	#photography {
 		background-color: rgba(51, 51, 51, 0.6);
