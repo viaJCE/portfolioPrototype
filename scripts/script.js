@@ -66,9 +66,9 @@ $(document).ready(function () {
 
 
 
-console.log(sections);
-console.log(eachLink);
-console.log(secNames[1]);
+// console.log(sections);
+// console.log(eachLink);
+// console.log(secNames[1]);
 
 $(document).ready(function() {
 	document.addEventListener('scroll', function() {
@@ -86,13 +86,26 @@ var aboutSecBody = document.querySelector("#about > .sectionBody");
 var aSBOffset = aboutSecBody.getBoundingClientRect();
 var aSBOffset_top = aSBOffset.top;
 var midOfWindow = (window.innerHeight / 2);
+var topOfWindow = (window.innerHeight / window.innerHeight);
+
+
+var first = $(".moreOnMe:nth-child(1)")
+var second = $(".moreOnMe:nth-child(2)")
+
 // for testing purposes 
 	// console.log(aboutSecBody);
 	// console.log(aSBOffset);
 	// console.log(aSBOffset_top)
 	console.log(midOfWindow);
+	console.log(window.innerHeight / window.innerHeight);
 
 $(document).ready(function(){
+
+	var first = $(".moreOnMe:nth-child(1)");
+	var second = $(".moreOnMe:nth-child(2)");
+
+	console.log(first);
+	console.log(second);
 
 	var scrollTop = $(window).scrollTop();
     var elementOffset = aSBOffset_top;
@@ -103,16 +116,19 @@ $(document).ready(function(){
    	    var scrollTop = $(window).scrollTop();
         var elementOffset = aSBOffset_top;
         var currentElementOffset = (elementOffset - scrollTop);
+        console.log(scrollTop);
+        // console.log(midOfWindow);
+        console.log(currentElementOffset);
+        // console.log(currentElementOffset < 430);
 
         if (currentElementOffset < midOfWindow) {
-			console.log("this is the middle");
+			// console.log("this is the middle");
+			$(first).addClass('fadeInUp');
 		}
-		else {
-			console.log('This is not the middle');
+
+		if (currentElementOffset <= topOfWindow) {
+			// console.log("I'm at the top");
+			$(second).addClass('fadeInUp');
 		}
    });
-
-   	// console.log(scrollTop);
-    // console.log(elementOffset);
-    // console.log(currentElementOffset);
 });

@@ -438,7 +438,7 @@ section header {
 }*/
 
 .sectionBody {
-	/*border-top: 1px solid;*/
+	border-top: 1px solid;
 }
 
 section article {
@@ -507,21 +507,34 @@ section article {
 #about article.moreOnMe {
 	width: 70%;
 	margin: 120px auto;
+	position: relative;
+
 	border-bottom: 2px solid white;
 	padding-bottom: 30px;
 	border-image: linear-gradient(to right, #3bdaca 30%, #3a4ed5 100%);
 	border-image-slice: 1;
 
-	animation-name: fadeInUp;
+	opacity: 0;
+
+/*	animation-name: fadeInUp;
 	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;*/
 }
 
-	#about article.moreOnMe:nth-child(1n) {
+	article.fadeInUp {
+		animation-name: fadeInUp;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+	}
+
+	#about article.moreOnMe:nth-child(1) {
 		text-align: right;
 		margin-bottom: 200px
 	}
 
-	#about article.moreOnMe:nth-child(2n) {
+	#about article.moreOnMe:nth-child(2) {
 		text-align: left;
 	}
 
@@ -547,7 +560,8 @@ section article {
 
 
 @keyframes fadeInUp {
-
+	from {opacity: 0; bottom: -50px;}
+	to {opacity: 1; bottom: 0px;}
 }
 
 
@@ -715,7 +729,7 @@ section#photography {
 		.masonry .tile:hover img {
 		  opacity: .75;
 		}
-		
+
 
 
 		@media only screen and (min-width: 768px) and (max-width: 1023px) {
