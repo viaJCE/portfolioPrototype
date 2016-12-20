@@ -438,7 +438,7 @@ section header {
 }*/
 
 .sectionBody {
-	border-top: 1px solid;
+	/*border-top: 1px solid;*/
 }
 
 section article {
@@ -647,6 +647,44 @@ section#skills {
 		}
 
 
+
+	.col-sm-4 div.fillUpOne {
+		animation-name: fillUpOne;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+	}
+
+
+@keyframes fillUpOne {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(284.4deg);}
+}
+
+@keyframes fillUpTwo {
+	from {}
+	to {}
+}
+
+@keyframes fillUpThree {
+	from {}
+	to {}
+}
+
+@keyframes fillUpFourth {
+	from {}
+	to {}
+}
+
+@keyframes fillUpFifth {
+	from {}
+	to {}
+}
+
+@keyframes fillUpSix {
+	from {}
+	to {}
+}
 
 
 

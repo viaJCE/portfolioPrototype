@@ -86,23 +86,30 @@ var aboutSecBody = document.querySelector("#about > .sectionBody");
 var aSBOffset = aboutSecBody.getBoundingClientRect();
 var aSBOffset_top = aSBOffset.top;
 var midOfWindow = (window.innerHeight / 2);
+var seventhOfWindow = (window.innerHeight * 0.71);
 var topOfWindow = (window.innerHeight / window.innerHeight);
+
+var skillSection = document.getElementById('skills');
+var skillOffset = skillSection.getBoundingClientRect();
+var skillOffset_top = skillOffset.top;
+
+var skillBoxesOne = document.querySelectorAll('#firstRow .col-sm-4 .c100');
+console.log(skillBoxesOne);
 
 
 var first = $(".moreOnMe:nth-child(1)")
 var second = $(".moreOnMe:nth-child(2)")
 
-// for testing purposes 
-	// console.log(aboutSecBody);
-	// console.log(aSBOffset);
-	// console.log(aSBOffset_top)
-	console.log(midOfWindow);
-	console.log(window.innerHeight / window.innerHeight);
+console.log(midOfWindow);
+console.log(seventhOfWindow);
+console.log(window.innerHeight / window.innerHeight);
 
 $(document).ready(function(){
 
 	var first = $(".moreOnMe:nth-child(1)");
 	var second = $(".moreOnMe:nth-child(2)");
+	var skillBoxesOne = document.querySelectorAll('#firstRow .col-sm-4 .c100');
+	console.log(skillBoxesOne[0]);
 
 	console.log(first);
 	console.log(second);
@@ -110,25 +117,39 @@ $(document).ready(function(){
 	var scrollTop = $(window).scrollTop();
     var elementOffset = aSBOffset_top;
     var currentElementOffset = (elementOffset - scrollTop);
+
+    var secondElementOffset = skillOffset_top;
+    var secElementOffset = (secondElementOffset - scrollTop);
 	
 
    $(window).bind('scroll', function() {
    	    var scrollTop = $(window).scrollTop();
         var elementOffset = aSBOffset_top;
-        var currentElementOffset = (elementOffset - scrollTop);
+        var absElementOffset = (elementOffset - scrollTop);
+
+        var secondElementOffset = skillOffset_top;
+    	var secElementOffset = (secondElementOffset - scrollTop);
         console.log(scrollTop);
         // console.log(midOfWindow);
-        console.log(currentElementOffset);
+        // console.log(currentElementOffset);
         // console.log(currentElementOffset < 430);
 
-        if (currentElementOffset < midOfWindow) {
+        if (absElementOffset < midOfWindow) {
 			// console.log("this is the middle");
 			$(first).addClass('fadeInUp');
 		}
 
-		if (currentElementOffset <= topOfWindow) {
+		if (absElementOffset <= 10) {
 			// console.log("I'm at the top");
 			$(second).addClass('fadeInUp');
 		}
+
+		if (secElementOffset < seventhOfWindow) {
+			console.log("We're about a Seventh there...");
+			$(skillBoxesOne[0]).addClass('fillUpOne');
+		}
+
+		// console.log(secElementOffset);
+		// console.log(eighthOfWindow);
    });
 });
