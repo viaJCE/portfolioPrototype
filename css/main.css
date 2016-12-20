@@ -380,6 +380,7 @@ section header {
 
 	background-color: white;
 	position: relative;
+	border: none;
 	/*border: 1px solid black;*/
 }
 
@@ -413,7 +414,7 @@ section header {
 	font-family: "Cajito Light";
 	font-size: 1.3em;
 	letter-spacing: 3px;
-	
+
 	transition: all ease-out 0.3s;
 }
 
@@ -437,7 +438,7 @@ section header {
 }*/
 
 .sectionBody {
-	border-top: 1px solid;
+	/*border-top: 1px solid;*/
 }
 
 section article {
@@ -595,6 +596,19 @@ section#skills {
 		padding: 10px 0;
 	}	
 
+	@media screen and (min-width: 768px) {
+		#skills .skillsBox {
+			width: 31%;
+			margin: 20px 1.1%;
+		}	
+	}
+
+	@media screen and (max-width: 768px) {
+		#skills .skillsBox {
+			/*Fill with stuffs*/
+		}	
+	}
+
 		#skills .skillsBox h3, #skills .skillsBox h5 {
 			font-family: "Raleway", sans-serif;
 			font-weight: 300;
@@ -631,9 +645,112 @@ section#skills {
 
 
 
-	#photography {
-		background-color: rgba(51, 51, 51, 0.6);
-	} 
+section#photography {
+		
+}
+
+
+	#photography h1 {
+		width: 60%;
+		margin: 0 auto 60px;
+		padding-top: 60px;
+
+		font-family: "Raleway", sans-serif;
+		font-weight: 300;
+		text-align: center;
+		color: #717171;
+	}
+
+	#photography h3 {
+		width: 80%;
+		max-width: 850px;
+		margin: 0 auto;
+
+		font-family: "Raleway", sans-serif;
+		font-size: 1.25em;
+		font-weight: 300;
+		text-align: center;
+		line-height: 24px;
+	}
+
+
+		#photography .masonry-wrapper {
+	    width: 95%;
+	    margin: 3em auto;
+		}
+
+		.masonry { 
+			width: 100%;
+		    column-count: 3;
+		    margin: 0;
+		    padding: 0;
+		    /*-moz-column-gap: 0;*/
+		    /*-webkit-column-gap: 0;*/
+		    column-gap: 20px;
+		    font-size: 0em;
+		    border: none;
+		}
+
+		.masonry .tile {
+		    display: inline-block;
+		    width: 100%;
+		    margin: 0;
+		    margin-top: 0px;
+		    margin-bottom: 20px;
+		    box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    border: none;
+		}
+
+		.masonry .tile img {
+			width: 100%;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			transition: all .5s ease-in-out;
+			border: none;
+		}
+
+		.masonry .tile:hover img {
+		  opacity: .75;
+		}
+		
+
+
+		@media only screen and (min-width: 768px) and (max-width: 1023px) {
+			.masonry {
+		    -moz-column-count: 2;
+		    -webkit-column-count: 2;
+		    column-count: 2;
+		  	}
+		}
+
+		@media only screen and (max-width: 768px) {
+			.masonry {
+		    -moz-column-count: 1;
+		    -webkit-column-count: 1;
+		    column-count: 1;
+		  	}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	#portfolio {
 		background-color: rgba(51, 51, 51, 0.8);

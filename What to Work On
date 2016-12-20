@@ -1,0 +1,7 @@
+12/19/16 Mon @ 12:17am:
+
+- Make skillsBox in skills section mobile responsive.
+	Put them in the middle. Make them and the contents abit bigger
+- Work on JS / Jquery for #moreOnMe sections, so that we can have them 
+  fade in and come up upon 
+	The top of them being at the halfway point in the viewport's height 
