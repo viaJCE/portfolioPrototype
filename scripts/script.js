@@ -86,20 +86,33 @@ var aboutSecBody = document.querySelector("#about > .sectionBody");
 var aSBOffset = aboutSecBody.getBoundingClientRect();
 var aSBOffset_top = aSBOffset.top;
 var midOfWindow = (window.innerHeight / 2);
-console.log(aboutSecBody);
-console.log(aSBOffset);
-console.log(aSBOffset_top)
-console.log(midOfWindow);
+// for testing purposes 
+	// console.log(aboutSecBody);
+	// console.log(aSBOffset);
+	// console.log(aSBOffset_top)
+	console.log(midOfWindow);
 
+$(document).ready(function(){
 
-$(document).ready( function() {	
+	var scrollTop = $(window).scrollTop();
+    var elementOffset = aSBOffset_top;
+    var currentElementOffset = (elementOffset - scrollTop);
 	
-	$(window).on('scroll', function() {
-		if (midOfWindow >= aSBOffset_top) {
+
+   $(window).bind('scroll', function() {
+   	    var scrollTop = $(window).scrollTop();
+        var elementOffset = aSBOffset_top;
+        var currentElementOffset = (elementOffset - scrollTop);
+
+        if (currentElementOffset < midOfWindow) {
 			console.log("this is the middle");
 		}
 		else {
 			console.log('This is not the middle');
 		}
-	})
-})
+   });
+
+   	// console.log(scrollTop);
+    // console.log(elementOffset);
+    // console.log(currentElementOffset);
+});
