@@ -86,15 +86,16 @@ var aboutSecBody = document.querySelector("#about > .sectionBody");
 var aSBOffset = aboutSecBody.getBoundingClientRect();
 var aSBOffset_top = aSBOffset.top;
 var midOfWindow = (window.innerHeight / 2);
-var seventhOfWindow = (window.innerHeight * 0.71);
+var seventhOfWindow = (window.innerHeight * 0.3);
 var topOfWindow = (window.innerHeight / window.innerHeight);
 
 var skillSection = document.getElementById('skills');
 var skillOffset = skillSection.getBoundingClientRect();
 var skillOffset_top = skillOffset.top;
 
-var skillBoxesOne = document.querySelectorAll('#firstRow .col-sm-4 .c100');
-console.log(skillBoxesOne);
+var skillBoxesBar = document.querySelectorAll('.col-sm-4 .c100 .bar');
+var skillBoxesFill = document.querySelectorAll('.col-sm-4 .c100 .fill');
+// console.log(skillBoxesOne);
 
 
 var first = $(".moreOnMe:nth-child(1)")
@@ -109,7 +110,7 @@ $(document).ready(function(){
 	var first = $(".moreOnMe:nth-child(1)");
 	var second = $(".moreOnMe:nth-child(2)");
 	var skillBoxesOne = document.querySelectorAll('#firstRow .col-sm-4 .c100');
-	console.log(skillBoxesOne[0]);
+	// console.log(skillBoxesOne[0]);
 
 	console.log(first);
 	console.log(second);
@@ -146,7 +147,11 @@ $(document).ready(function(){
 
 		if (secElementOffset < seventhOfWindow) {
 			console.log("We're about a Seventh there...");
-			$(skillBoxesOne[0]).addClass('fillUpOne');
+			for (let i = 0; i < skillBoxesBar.length; i++) {
+				$(skillBoxesBar[i]).addClass('fillUp');
+				$(skillBoxesFill[i]).addClass('fillUp');
+			}
+			
 		}
 
 		// console.log(secElementOffset);

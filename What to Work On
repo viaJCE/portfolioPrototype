@@ -8,7 +8,15 @@
 
 12/20/16 Tues @ 12:48am:
 
-- Make percentage circles in #skills section fill up once that section's top reaches top of page, or when it's corresponding link in the nav bar becomes active
+- Make percentage circles in #skills section fill up once that section's top reaches top of page, or when it's corresponding link in the nav bar becomes active (completed 12/21/16. Went with different approach)
 
 - Add some offset to the scrollspy
+
+
+12/21/16 Wednes @ 10:15pm
+
+- Finish styling contact box 
+	* Edit color of placeholder text
+- Add Social Media links to bottom of #contactBox
+- Figure out why there is access space under contact section and remove it.
 
