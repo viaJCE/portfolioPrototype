@@ -779,14 +779,100 @@ section#photography {
 
 
 
-	#portfolio {
-		background-color: rgba(51, 51, 51, 0.8);
-	} 
+#portfolio {
+	/*background-color: rgba(51, 51, 51, 0.8);*/
+} 
+		
+	#portfolio header {
+/*		background: linear-gradient(
+			                #3bdaca 30%, #3a4ed5 100%),*/
+		background: linear-gradient(
+					rgba(59,218,202, 0.5),
+					rgba(58,78,213, 0.5)
+		            ),
+					url('../img/greenChameleon.jpg');
+		            
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		color: white;
+	}
+	
+	#portfolio h1 {
+		width: 60%;
+		margin: 0 auto 60px;
+		padding-top: 60px;
 
+		font-family: "Raleway", sans-serif;
+		font-weight: 300;
+		text-align: center;
+		color: white;
+	}
 
+	#portfolio .subheader {
+		width: 80%;
+		max-width: 850px;
+		margin: 0 auto;
 
+		font-family: "Raleway", sans-serif;
+		font-size: 1.25em;
+		font-weight: 300;
+		text-align: center;
+		line-height: 24px;
 
+		padding: 15px;
+		background-color: rgba(1, 1, 1, 0.3);
+	}
 
+#portfolio .portfolioBox {
+	width: 85%;
+	margin: 60px auto;
+
+	border: 1px solid rgba(113, 113, 113, 0.6);
+	border-radius: 2px;
+	box-sizing: border-box;
+	padding: 10px 0;
+
+}
+
+	#portfolio .portfolioBox .row {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	#portfolio .portfolioBox .row img {
+		position: relative;
+		width: 100%;
+	}
+
+	#portfolio .portfolioBox .row img:hover {
+		/*background-color: */
+		opacity: 0.4;
+	}
+
+	#portfolio .portfolioBox .row img:hover > .portfolioBox .project h5 {
+		opacity: 1;
+	}
+
+	#portfolio .portfolioBox .project h5 {
+		position: absolute;
+		height: 0;
+		width: 50%;
+		margin: 0 auto;
+
+		padding: 5px;
+
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 40%;
+
+		text-align: center;
+
+		opacity: 0;
+	}
 
 
 
