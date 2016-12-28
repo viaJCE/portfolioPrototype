@@ -24,8 +24,11 @@ if (infoBox.classList.contains("disappear")) {
 	infoBox.style.display = "none";	
 }
 
+var body = document.getElementsByTagName("BODY")[0];
+console.log(body);
+
 startButton.addEventListener('mouseover', function() {
-	document.getElementById('sectionsWrapper').style.display = "block";
+	body.style.overflowY = "visible";
 })
 
 
