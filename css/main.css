@@ -503,6 +503,10 @@ section article {
 		font-weight: 300;
 	}
 
+#about .sectionBody {
+	margin: 160px 0 240px;
+}
+
 
 #about article.moreOnMe {
 	width: 70%;
@@ -822,7 +826,7 @@ section#photography {
 		line-height: 24px;
 
 		padding: 15px;
-		background-color: rgba(1, 1, 1, 0.3);
+		background-color: rgba(1, 1, 1, 0.5);
 	}
 
 #portfolio .portfolioBox {
@@ -845,6 +849,8 @@ section#photography {
 	#portfolio .portfolioBox .row img {
 		position: relative;
 		width: 100%;
+		transition: all ease-out 0.3s;
+		/*opacity: 0.4;*/
 	}
 
 	#portfolio .portfolioBox .row img:hover {
@@ -852,28 +858,40 @@ section#photography {
 		opacity: 0.4;
 	}
 
-	#portfolio .portfolioBox .row img:hover > .portfolioBox .project h5 {
+	#portfolio .portfolioBox .row img:hover .portfolioBox .row .project h5 {
 		opacity: 1;
+		transition: all ease-out 0.3s;
 	}
 
-	#portfolio .portfolioBox .project h5 {
+	#portfolio .portfolioBox .project .aboutProject {
 		position: absolute;
-		height: 0;
 		width: 50%;
-		margin: 0 auto;
-
-		padding: 5px;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+		
+		padding: 10px;
 
 		left: 0;
 		right: 0;
 		bottom: 0;
-		top: 40%;
+		top: 50%;
+		transform: translateY(-50%);
 
-		text-align: center;
-
-		opacity: 0;
+		background-color: rgba(1, 1, 1, 0.3);
+		/*opacity: 0;*/
 	}
 
+	#portfolio .portfolioBox .project h5 {
+		text-align: center;
+		font-size: 1.3em;
+	}
+
+	#portfolio .portfolioBox .project h5 a {
+		margin: 5px auto;
+		color: #3bdaca;
+	}
 
 
 
@@ -1069,7 +1087,8 @@ textarea:hover {
 		display: block;
 		margin: 0 auto;
 		width: 55px;
-
+		
+		text-decoration: none;
 		text-align: center;
 		font-size: 1.5em;
 		color: white;

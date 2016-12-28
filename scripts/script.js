@@ -158,3 +158,41 @@ $(document).ready(function(){
 		// console.log(eighthOfWindow);
    });
 });
+
+
+var project = document.getElementsByClassName('project');
+var aboutProject = document.getElementsByClassName('aboutProject');
+console.log(aboutProject);
+// var hasmouseover = true;
+
+
+for(let i = 0; i < project.length; i++) {
+	
+	project[i].addEventListener('mouseover', function() {
+		aboutProject[i].style.opacity = 1;
+		aboutProject[i].style.transition = 'all ease-out 0.3s';
+	})
+	project[i].addEventListener('mouseout', function() {
+		hasmouseover = false;
+		aboutProject[i].style.opacity = 0;
+		aboutProject[i].style.transition = 'all ease-out 0.3s';
+	})
+
+	// if (hasmouseover) {
+	// 	// aboutProject[i].addEventListener('mouseover', function() {
+	// 	// 	aboutProject[i].style.opacity = 1;
+	// 	// 	aboutProject[i].style.transition = 'all ease-out 0.3s';
+	// 	// 	project[i].style.opacity = 0.4;
+	// 	// 	project[i].style.transition = 'all ease-out 0.3s';
+	// 	// })
+	// }
+	
+	// if (!hasmouseover) {
+	// 	// aboutProject[i].addEventListener('mouseout', function() {
+	// 	// 	aboutProject[i].style.opacity = 0;
+	// 	// 	aboutProject[i].style.transition = 'all ease-out 0.3s';
+	// 	// 	project[i].style.opacity = 1;
+	// 	// 	project[i].style.transition = 'all ease-out 0.3s';
+	// 	// })
+	// }
+}
